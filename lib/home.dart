@@ -11,7 +11,7 @@ class Clone extends StatelessWidget {
     'images/bigbillion.jpg',
     'images/advertise2.jpg',
     'images/advertise3.jpg',
-    'images/advertise4.jpg'
+    'images/advertise4.jpg',
   ];
 
   scroll(String image, String text) {
@@ -62,7 +62,10 @@ class Clone extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
-      body: SingleChildScrollView(
+      
+
+      body: 
+      SingleChildScrollView(
         child: Column(
           children: [
             Container(
