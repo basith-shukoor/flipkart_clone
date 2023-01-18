@@ -74,31 +74,34 @@ Icons.speaker,Icons.add,Icons.shop,Icons.fireplace_sharp
                 ],
               ),
             ),
-            GridView.builder(shrinkWrap: true,
-                gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,crossAxisSpacing:4,),
-                itemCount: img.length,
-                itemBuilder: (BuildContext context, int index){
-              return Column(
-                children: [
-                  GestureDetector(onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Fasion()),
-                    );
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GridView.builder(shrinkWrap: true,
+                  gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,crossAxisSpacing:4,),
+                  itemCount: img.length,
+                  itemBuilder: (BuildContext context, int index){
+                return Column(
+                  children: [
+                    GestureDetector(onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Fasion()),
+                      );
 
-                  },
+                    },
 
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(img[index]),
-                      radius: 30,
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage(img[index]),
+                        radius: 30,
 
+                      ),
                     ),
-                  ),
-                  Text(txt[index],style: TextStyle(fontWeight: FontWeight.w500),),
-                ],
-              );
+                    Text(txt[index],style: TextStyle(fontWeight: FontWeight.w500),),
+                  ],
+                );
 
-                }
+                  }
 
+              ),
             ),
             Container(
               height: 1,
